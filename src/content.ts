@@ -11,7 +11,7 @@ export const META: Record<Lang, { title: string; description: string }> = {
   },
 };
 
-export const ROOM_IMAGES = ['joglo', 'pendopo', 'tamansari'] as const;
+export const ROOM_PHOTOS: string[][] = [["rm-joglo-1", "rm-joglo-2", "rm-joglo-3"], ["rm-pendhapa-1", "rm-pendhapa-2", "rm-pendhapa-3"], ["rm-taman-1", "rm-taman-2", "rm-taman-3"]];
 
 export const COPY = {
   en: {
@@ -30,11 +30,11 @@ export const COPY = {
     roomsEyebrow: 'Rooms', roomsTitle: 'Three houses, nine rooms',
     prev: 'Previous room', next: 'Next room', of: 'of', swipe: 'Swipe to browse',
     rooms: [
-      { name: 'Joglo Room', meta: 'Garden courtyard · King bed · 2 guests', text: 'Under a tiered joglo roof, with carved doors that open onto a frangipani courtyard.', alt: 'Traditional Javanese joglo house with a tiered roof' },
-      { name: 'Pendhapa Suite', meta: 'Private veranda · King bed · 3 guests', text: 'Beside the open pendhapa, with a veranda of teak and a daybed for slow afternoons.', alt: 'Carved teak pendopo pavilion of a traditional Javanese house' },
-      { name: 'Taman Residence', meta: 'Two bedrooms · Plunge pool · 5 guests', text: 'A walled house inspired by the water palace of Taman Sari, with its own pool and garden.', alt: 'Carved gate of the Taman Sari water palace in Yogyakarta' },
+      { name: 'Joglo Room', meta: 'Garden courtyard · King bed · 2 guests', text: 'Under a tiered joglo roof, with carved doors that open onto a frangipani courtyard.', alts: ["Heritage four-poster bed with white canopy and teak furniture", "Four-poster bed between tall shuttered doors", "View through carved teak wardrobes to the heritage bedroom"] },
+      { name: 'Pendhapa Suite', meta: 'Private veranda · King bed · 3 guests', text: 'Beside the open pendhapa, with a veranda of teak and a daybed for slow afternoons.', alts: ["Joglo hall with teak pillars and colonial-era armchairs", "Carved wooden roof structure of a Javanese joglo", "Heritage sitting room with a teak cabinet and daybed"] },
+      { name: 'Taman Residence', meta: 'Two bedrooms · Plunge pool · 5 guests', text: 'A walled house inspired by the water palace of Taman Sari, with its own pool and garden.', alts: ["Modern suite bedroom with a king bed and warm lighting", "Courtyard pool framed by lit colonial arcades", "Bedroom with a wooden bed under a dark timber ceiling"] },
     ],
-    askRoom: 'Ask about this room',
+    photoNote: 'Illustrative photo', photoOf: 'Photo {n} of {t}', askRoom: 'Ask about this room',
     rasaEyebrow: 'Rasa · Experiences', rasaTitle: 'Days shaped by the city',
     rasa: [
       { t: 'Batik with a master', d: 'Draw with hot wax and a canting in our studio, then dye your cloth in sogan and indigo.', img: 'batik', alt: 'Batik maker drawing wax patterns on cloth in Yogyakarta' },
@@ -72,11 +72,11 @@ export const COPY = {
     roomsEyebrow: 'Kamar', roomsTitle: 'Tiga rumah, sembilan kamar',
     prev: 'Kamar sebelumnya', next: 'Kamar berikutnya', of: 'dari', swipe: 'Geser untuk melihat',
     rooms: [
-      { name: 'Kamar Joglo', meta: 'Pelataran taman · Ranjang king · 2 tamu', text: 'Di bawah atap joglo bertingkat, dengan pintu ukir yang terbuka ke pelataran kamboja.', alt: 'Rumah joglo tradisional Jawa dengan atap bertingkat' },
-      { name: 'Suite Pendhapa', meta: 'Beranda pribadi · Ranjang king · 3 tamu', text: 'Di samping pendhapa terbuka, dengan beranda jati dan daybed untuk sore yang santai.', alt: 'Pendopo jati berukir pada rumah tradisional Jawa' },
-      { name: 'Griya Taman', meta: 'Dua kamar tidur · Kolam rendam · 5 tamu', text: 'Rumah bertembok yang terinspirasi istana air Taman Sari, dengan kolam dan taman sendiri.', alt: 'Gapura berukir istana air Taman Sari di Yogyakarta' },
+      { name: 'Kamar Joglo', meta: 'Pelataran taman · Ranjang king · 2 tamu', text: 'Di bawah atap joglo bertingkat, dengan pintu ukir yang terbuka ke pelataran kamboja.', alts: ["Ranjang empat tiang klasik berkelambu putih dengan perabot jati", "Ranjang empat tiang di antara pintu krepyak tinggi", "Pandangan melalui lemari jati berukir ke kamar klasik"] },
+      { name: 'Suite Pendhapa', meta: 'Beranda pribadi · Ranjang king · 3 tamu', text: 'Di samping pendhapa terbuka, dengan beranda jati dan daybed untuk sore yang santai.', alts: ["Pendhapa joglo dengan tiang jati dan kursi kuno", "Struktur atap kayu berukir pada joglo Jawa", "Ruang duduk klasik dengan lemari jati dan daybed"] },
+      { name: 'Griya Taman', meta: 'Dua kamar tidur · Kolam rendam · 5 tamu', text: 'Rumah bertembok yang terinspirasi istana air Taman Sari, dengan kolam dan taman sendiri.', alts: ["Kamar suite modern dengan ranjang king dan cahaya hangat", "Kolam pelataran dibingkai lorong kolonial yang bercahaya", "Kamar dengan ranjang kayu di bawah plafon kayu gelap"] },
     ],
-    askRoom: 'Tanya tentang kamar ini',
+    photoNote: 'Foto ilustrasi', photoOf: 'Foto {n} dari {t}', askRoom: 'Tanya tentang kamar ini',
     rasaEyebrow: 'Rasa · Pengalaman', rasaTitle: 'Hari yang dibentuk oleh kota',
     rasa: [
       { t: 'Membatik bersama empu', d: 'Melukis dengan malam panas dan canting di sanggar kami, lalu mencelup kain dalam sogan dan nila.', img: 'batik', alt: 'Pembatik melukis pola malam pada kain di Yogyakarta' },

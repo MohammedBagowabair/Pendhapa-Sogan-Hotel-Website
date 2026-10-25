@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, Check, Minus, Phone, Plus, X } from 'lucide-react';
-import { COPY, ROOM_IMAGES } from '@/content';
+import { COPY, ROOM_PHOTOS } from '@/content';
 import { CREDITS } from '@/credits';
 import { useCopy } from '@/lib/lang';
 import { PHONE_DISPLAY, TEL, waUrl } from '@/lib/wa';
 import { todayISO, useBooking } from '@/lib/booking';
 import { HeroPic, Pic } from '@/components/Pic';
+import { RoomGallery } from '@/components/RoomGallery';
 import { LangSwitch } from '@/components/LangSwitch';
 import { WaFab, WaIcon } from '@/components/WaFab';
 
@@ -182,7 +183,7 @@ function Rooms({ onAsk }: { onAsk: (r: string) => void }) {
       <div className="deck" ref={ref} onScroll={onScroll} role="region" aria-label={c.roomsTitle} tabIndex={0}>
         {c.rooms.map((r, i) => (
           <article className={`room ${i === idx ? 'on' : ''}`} key={r.name}>
-            <div className="arch"><Pic name={ROOM_IMAGES[i] ?? 'joglo'} alt={r.alt} sizes="(min-width: 900px) 32vw, 80vw" /></div>
+            <div className="arch"><RoomGallery photos={ROOM_PHOTOS[i] ?? []} alts={r.alts} label={r.name} note={c.photoNote} photoOf={c.photoOf} sizes="(min-width: 900px) 32vw, 80vw" /></div>
             <p className="r-meta">{r.meta}</p>
             <h3>{r.name}</h3>
             <p className="r-text">{r.text}</p>
